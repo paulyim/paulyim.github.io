@@ -3,7 +3,7 @@
 <channel>
 <atom:link href='http://paulyim.github.io/' rel='self' type='application/rss+xml'/>
 <title>
-My Awesome Blog
+Paul Yim Blog
 </title>
 <link>
 http://paulyim.github.io/
@@ -12,7 +12,7 @@ http://paulyim.github.io/
 This blog is usually talk about clojure and android development
 </description>
 <lastBuildDate>
-Sun, 17 Jan 2016 20:01:28 +0800
+Sun, 17 Jan 2016 22:21:05 +0800
 </lastBuildDate>
 <generator>
 clj-rss
