@@ -12,11 +12,125 @@ http://paulyim.github.io/
 This blog is usually talk about clojure and android development
 </description>
 <lastBuildDate>
-Thu, 01 Sep 2016 13:14:49 +0800
+Fri, 02 Sep 2016 10:15:49 +0800
 </lastBuildDate>
 <generator>
 clj-rss
 </generator>
+<item>
+<guid>
+http://paulyim.github.io/posts-output/2014-03-14-Cryogen文档-自定义你的主页.html
+</guid>
+<link>
+http://paulyim.github.io/posts-output/2014-03-14-Cryogen文档-自定义你的主页.html
+</link>
+<title>
+Cryogen文档-自定义你的主页
+</title>
+<description>
+&lt;p&gt;Cryogen 支持你的博客主页只显示单条博客的内容或者显示博客列表预览。&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;单条博客选项&quot;&gt;&lt;/a&gt;单条博客选项&lt;/h2&gt;&lt;p&gt;这个选项会在主页将你最后发表的一篇文章内容显示出来。&lt;/p&gt;&lt;p&gt;(Ex. &lt;a href='http://yogthos.net/'&gt;yogthos.net&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;这个选项不需要配置默认的 &lt;code&gt;config.edn&lt;/code&gt; 文件，只需要将 &lt;code&gt;:previews?&lt;/code&gt; 属性指定为 &lt;code&gt;false&lt;/code&gt; 即可。&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;博客列表预览选项&quot;&gt;&lt;/a&gt;博客列表预览选项&lt;/h2&gt;&lt;p&gt;这个选项允许你在主页显示指定数量的文章列表，列表中的文章会显示标题、日期和文章内容的片段和一个阅读全部文章内容的链接，主页还会显示 上篇／下篇 的链接，如果有足够的数据。&lt;/p&gt;&lt;p&gt;如下图所示：&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/img/myblog-preview-ex.png&quot; alt=&quot;预览示例&quot; /&gt;&lt;/p&gt;&lt;p&gt;使用这个选项，你需要在 &lt;code&gt;config.edn&lt;/code&gt; 文件中配置三个属性：&lt;/p&gt;&lt;p&gt;&lt;code&gt;:posts-per-page&lt;/code&gt; - 设置在首页显示博客列表的数目。&lt;/p&gt;&lt;p&gt;&lt;code&gt;:blocks-per-preview&lt;/code&gt; - 设置博客预览内容显示的 html 标签元素数目，例如，如果你的文章中有 &lt;code&gt;1&lt;/code&gt; 个 &lt;code&gt;h2&lt;/code&gt; 标签和 &lt;code&gt;8&lt;/code&gt; 个 &lt;code&gt;p&lt;/code&gt; 标签，然后 &lt;code&gt;:blocks-per-preview&lt;/code&gt; 设置为 &lt;code&gt;3&lt;/code&gt; ，那么预览内容将会显示 &lt;code&gt;1&lt;/code&gt; 个 &lt;code&gt;h2&lt;/code&gt; 和 &lt;code&gt;2&lt;/code&gt; 个 &lt;code&gt;p&lt;/code&gt; 的 html 内容。&lt;/p&gt;&lt;p&gt;如果你想覆盖默认的预览片段长度，你可以在 Markdown/AsciiDoc 文件中插入 &lt;code&gt;&amp;lt;!&amp;ndash;more&amp;ndash;&amp;gt;&lt;/code&gt; 标记，这样 Cryogen 就知道应该从哪里折断预览内容了。&lt;/p&gt;&lt;p&gt;&lt;code&gt;:previews?&lt;/code&gt; - 设置为 &lt;code&gt;true&lt;/code&gt;。&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Fri, 14 Mar 2014 00:00:00 +0800
+</pubDate>
+</item>
+<item>
+<guid>
+http://paulyim.github.io/posts-output/2014-03-13-Cryogen文档-创建页面.html
+</guid>
+<link>
+http://paulyim.github.io/posts-output/2014-03-13-Cryogen文档-创建页面.html
+</link>
+<title>
+Cryogen文档-创建页面
+</title>
+<description>
+&lt;p&gt;创建页面基本和创建文章一样，你只需配置好相应的元数据和使用正确的 Markdown/AsciiDoc 语法。&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;页面文件夹&quot;&gt;&lt;/a&gt;页面文件夹&lt;/h2&gt;&lt;p&gt;和内容一样，你的页面文件要放在配置文件 &lt;code&gt;config.edn&lt;/code&gt; 指定的 &lt;code&gt;page-root&lt;/code&gt; 目录下，再次强调，你的文件要包含指定的元数据和使用合法的 Markdown/AsciiDoc 语法，这样编译器才能将它们转换成 HTML 页面。&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;创建页面&quot;&gt;&lt;/a&gt;创建页面&lt;/h2&gt;&lt;p&gt;创建一个 Markdown/AsciiDoc 文件，将它放到 &lt;code&gt;page-root&lt;/code&gt; 目录下，你不需要像创建内容那样在文件名称和内容元数据标题中指定日期，但要使用英文破折号作为分隔而不要使用空格，并且文件要以 &lt;code&gt;.md&lt;/code&gt; 或者 &lt;code&gt;.asc&lt;/code&gt; 为扩展名，例如：&lt;/p&gt;&lt;pre&gt;&lt;code&gt;about.md
+my-projects.md
+contact-me.asc
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a name=&quot;页面内容&quot;&gt;&lt;/a&gt;页面内容&lt;/h3&gt;&lt;p&gt;以下为你的页面必须包含的元数据：&lt;/p&gt;&lt;p&gt;&lt;table class=&quot;table table-bordered&quot;&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;属性&lt;/th&gt; &lt;th&gt;描述&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt; &lt;td&gt;字符串格式的标题&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;layout&lt;/code&gt;&lt;/td&gt; &lt;td&gt;一个键值指定 HTML 生成的位置 &lt;code&gt;themes/{theme}/html&lt;/code&gt;.&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;page-index&lt;/code&gt;&lt;/td&gt; &lt;td&gt;作为上篇／下篇排序的依据&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;navbar?&lt;/code&gt;&lt;/td&gt; &lt;td&gt;指定为 &lt;code&gt;true&lt;/code&gt; 如果你的页面想使用 navbar（导航栏），指定为 &lt;code&gt;false&lt;/code&gt; 则使用 sidebar（侧边栏）&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/p&gt;&lt;p&gt;示例：&lt;/p&gt;&lt;pre&gt;&lt;code&gt;{:title      &amp;quot;Check out this page!&amp;quot;
+ :layout     :page
+ :page-index 0
+ :navbar?    false}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a name=&quot;页面包含图片和代码高亮&quot;&gt;&lt;/a&gt;页面包含图片和代码高亮&lt;/h3&gt;&lt;p&gt;参考 &lt;a href='/posts-output/2014-03-12-Cryogen文档-编写文章.html'&gt;Cryogen文档-编写文章&lt;/a&gt;&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Thu, 13 Mar 2014 00:00:00 +0800
+</pubDate>
+</item>
+<item>
+<guid>
+http://paulyim.github.io/posts-output/2014-03-13-Cryogen文档-Markdown或者AsciDoc格式切换.html
+</guid>
+<link>
+http://paulyim.github.io/posts-output/2014-03-13-Cryogen文档-Markdown或者AsciDoc格式切换.html
+</link>
+<title>
+Cryogen文档-Markdown或者AsciDoc格式切换
+</title>
+<description>
+&lt;p&gt;Cryogen 支持 Markdown/AsciiDoc 两种格式编写内容，你只能选择其中之一，默认使用 Markdown。&lt;/p&gt;&lt;p&gt;如果你想使用 AsciiDoc 格式，你可以将 &lt;code&gt;project.clj&lt;/code&gt; 文件中的 &lt;code&gt;:dependencies&lt;/code&gt; 的值从 &lt;code&gt;cryogen-markdown&lt;/code&gt; 更改为 &lt;code&gt;cryogen-asciidoc&lt;/code&gt;。相应的，编译器会从 &lt;code&gt;templates/md&lt;/code&gt; 目录寻找 &lt;code&gt;.md&lt;/code&gt; 文件切换到从 &lt;code&gt;templates/asc&lt;/code&gt; 目录寻找 &lt;code&gt;.asc&lt;/code&gt;　文件进行编译。&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Thu, 13 Mar 2014 00:00:00 +0800
+</pubDate>
+</item>
+<item>
+<guid>
+http://paulyim.github.io/posts-output/2014-03-12-Cryogen文档-编写文章.html
+</guid>
+<link>
+http://paulyim.github.io/posts-output/2014-03-12-Cryogen文档-编写文章.html
+</link>
+<title>
+Cryogen文档-编写文章
+</title>
+<description>
+&lt;p&gt;编写博客是　Cryogen 的核心支持，你只需要在指定的文件夹中编写　Markdown/AsciiDoc　文件，然后　Cryogen 负责将这些文件编译成一个博客网站。&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;存放博客文章的文件夹&quot;&gt;&lt;/a&gt;存放博客文章的文件夹&lt;/h2&gt;&lt;p&gt;你应该将所有的博客文章都放在配置文件中 &lt;code&gt;post-root&lt;/code&gt; 属性指定的文件夹路径下，然后在文章中配置好相应的元数据（稍后说明），这些元数据是用来指定文章的格式的，并且文章的内容符合　Markdown/AsciiDoc　的语法，Cryogen 在编译时会就把它转换为　Html 页面。&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;新建文章&quot;&gt;&lt;/a&gt;新建文章&lt;/h2&gt;&lt;p&gt;创建一篇文章，你只需要在 &lt;code&gt;post-root&lt;/code&gt; 目录下创建一个新的　Mardown 或者　AsciiDoc　文件（取决于你在配置文件中指定的格式　－　你只能选择其中之一），如果使用　Ｍarkdown，你的文章应该放在　&lt;code&gt;templages/md/{post-root}&lt;/code&gt;目录下，如果使用　AsciiDoc，则放在　&lt;code&gt;templages/asc/{post-root}&lt;/code&gt;目录下，注意，每篇文章文件名字的开头要加上日期（eg. 2014-03-12-你只需要拥有一点信念.md/asc）。&lt;/p&gt;&lt;p&gt;请一定要确保你的文章文件命名使用的日期格式要和　&lt;code&gt;config.edn&lt;/code&gt;　配置文件中指定的日期格式是一致的。&lt;/p&gt;&lt;p&gt;例如，如果指定的日期格式为 &lt;code&gt;dd-MM-yyyy&lt;/code&gt; ，Cryogen 要求你的文章文件的命名符合如下格式：&lt;/p&gt;&lt;pre&gt;&lt;code&gt;dd-MM-yyyy-标题.md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果在配置文件中没有指定日期格式，Cryogen 会使用默认的格式（yyyy-MM-dd）。&lt;/p&gt;&lt;p&gt;或者，如果你不想在文件的命名中指定日期，你可以在文章内容中配置元数据　&lt;code&gt;:date&lt;/code&gt;　指定日期，同样，日期格式要和　&lt;code&gt;config.edn&lt;/code&gt; 中的一致。&lt;/p&gt;&lt;p&gt;注意，文件标题分隔不要使用空格，要使用英文的破折号。&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;文章内容&quot;&gt;&lt;/a&gt;文章内容&lt;/h3&gt;&lt;p&gt;每篇文章都要配置好指定的元数据，它们是用来标识你的文章的标题和内容格式的。以下属性为必填：&lt;/p&gt;&lt;p&gt;&lt;table class=&quot;table table-bordered&quot;&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;属性&lt;/th&gt; &lt;th&gt;描述&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;title&lt;/code&gt;&lt;/td&gt; &lt;td&gt;字符串格式的文章标题&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;layout&lt;/code&gt;&lt;/td&gt; &lt;td&gt;一个键值指定你的文章生成的 html 文件放置的位置　&lt;code&gt;themes/{theme}/html&lt;/code&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/p&gt;&lt;p&gt;以下属性为可选：&lt;/p&gt;&lt;p&gt;&lt;table class=&quot;table table-bordered&quot;&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;属性&lt;/th&gt; &lt;th&gt;描述&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td style=&quot;width:100px&quot;&gt;&lt;code&gt;date&lt;/code&gt;&lt;/td&gt; &lt;td&gt;指定你的文章发表日期，必须要和 &lt;code&gt;config.edn&lt;/code&gt; 配置文件中指定的日期格式一致。 &lt;u&gt;非&lt;/u&gt; 可选，如果你没有在文章文件的命名中指定日期。&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;author&lt;/code&gt;&lt;/td&gt; &lt;td&gt;指定文章作者&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;tags&lt;/code&gt;&lt;/td&gt; &lt;td&gt;标签分类&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;toc&lt;/code&gt;&lt;/td&gt; &lt;td&gt; 指定为　true ，如果你想在文章内容的开头加上文章目录。 （目录默认是使用有序格式的，如果要用无序，指定　&lt;code&gt;:ul&lt;/code&gt;） &lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;code&gt;draft?&lt;/code&gt;&lt;/td&gt; &lt;td&gt; 指定为 true ，编译器将会忽略它，如果你的文章作为草稿还不想发布到博客站点上 &lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;/p&gt;&lt;p&gt;下面为 Markdown　格式的一个基础模板：&lt;/p&gt;&lt;pre&gt;&lt;code&gt;{:title  &amp;quot;First Post!&amp;quot;
+ :layout :post
+ :date   &amp;quot;201４-0３-１２&amp;quot;
+ :tags   &amp;#91;&amp;quot;tag1&amp;quot; &amp;quot;tag3&amp;quot;&amp;#93;}
+
+ ## Hello World
+
+ This is my first post!
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ Nunc sodales pharetra massa, eget fringilla ex ornare et.
+ Nunc mattis diam ac urna finibus sodales. Etiam sed ipsum
+ et purus commodo bibendum. Cras libero magna, fringilla
+ tristique quam sagittis, volutpat auctor mi. Aliquam luctus,
+ nulla et vestibulum finibus, nibh justo semper tortor, nec
+ vestibulum tortor est nec nisi.
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a name=&quot;多作者模式&quot;&gt;&lt;/a&gt;多作者模式&lt;/h3&gt;&lt;p&gt;通过 &lt;code&gt;:author&lt;/code&gt; 元属性，你可以指定文章的作者。如果你的博客存在多个作者，而且每个作者的页面格式都不一样，你需要在 &lt;code&gt;config.edn&lt;/code&gt; 配置文件中指定 &lt;code&gt;:author-root-uri&lt;/code&gt; 属性，然后编译器会根据　&lt;code&gt;templates/themes/{theme}/html/author.html&lt;/code&gt;　生成对应作者的 Html 文件。如果文章中没有指定 &lt;code&gt;:author&lt;/code&gt; 属性，那么 &lt;code&gt;config.edn&lt;/code&gt; 中的 &lt;code&gt;:author&lt;/code&gt; 会被使用。&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;标签分类&quot;&gt;&lt;/a&gt;标签分类&lt;/h3&gt;&lt;p&gt;Cryogen 会自动为你在文章中指定的每一个唯一的标签生成对应的页面。&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;在文章中包含图片&quot;&gt;&lt;/a&gt;在文章中包含图片&lt;/h3&gt;&lt;p&gt;如果你要在文章或页面中包含图片，有下面两种方式：&lt;/p&gt;&lt;p&gt;１. 在 &lt;code&gt;template&lt;/code&gt; 目录下创建 &lt;code&gt;assets&lt;/code&gt; 或者 &lt;code&gt;img&lt;/code&gt;　文件夹，确保这个文件夹的名称要和 &lt;code&gt;config.edn&lt;/code&gt; 中的 &lt;code&gt;resources&lt;/code&gt; 一致，这样编译器才能将你的图片传输到 &lt;code&gt;public&lt;/code&gt; 目录下。&lt;/p&gt;&lt;p&gt;２. 如果你的文章使用 Markdown 格式编写，你可以通过 Markdown 语法指定图片，需要注意的是要将文章和包含的图片放在单独的目录下，如下所示：&lt;/p&gt;&lt;pre&gt;&lt;code&gt; md
+ |---posts
+     |---2014-0３-11-title.md
+     |---diving
+         |---2014-03-12-title.md
+         |---turtle.jpg
+         |---dolphin.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;注意，如果你使用了第二种方式，编译器会将你的图片复制到 &lt;code&gt;public/img&lt;/code&gt; 下，所有下面使用这些图片时指定相应的地址&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;markdown&amp;#95;中包含图片&quot;&gt;&lt;/a&gt;Markdown 中包含图片&lt;/h3&gt;&lt;p&gt;如果你的文章使用 Markdown ，请使用如下格式包含图片： （&lt;code&gt;img&lt;/code&gt; 为你在 &lt;code&gt;resources/templates&lt;/code&gt; 下创建的文件夹）&lt;/p&gt;&lt;pre&gt;&lt;code&gt;!&amp;#91;Image 1&amp;#93;&amp;#40;/img/img01.png&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果你在 &lt;code&gt;config.edn&lt;/code&gt; 中配置了前缀，如 &lt;code&gt;/blog&lt;/code&gt; ，Cryogen 会自动为你的图片加上它，即&lt;/p&gt;&lt;pre&gt;&lt;code&gt;!&amp;#91;Image 1&amp;#93;&amp;#40;/img/img01.png&amp;#41;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;会被编译成：&lt;/p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;/blog/img/img01.png&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a name=&quot;代码高亮&quot;&gt;&lt;/a&gt;代码高亮&lt;/h3&gt;&lt;p&gt;Cryogen 使用 &lt;a href='https://highlightjs.org/'&gt;highlight.js&lt;/a&gt; 支持代码语法高亮。你的代码片段要包含在 (```) 中，这样 highlight.js 会自动检测代码片段的代码语言，并加上对应的代码颜色，如果你想手动指定代码语言，在开始 (```) 标记中指定即可。&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;集成　disqus&quot;&gt;&lt;/a&gt;集成　Disqus&lt;/h3&gt;&lt;p&gt;如果你想在文章中启动评论，创建一个 &lt;a href='https://disqus.com/'&gt;disqus&lt;/a&gt; 帐号和 &lt;a href='https://disqus.com/admin/create/'&gt;注册&lt;/a&gt; 你的博客。 确保配置文件　&lt;code&gt;config.edn&lt;/code&gt; 中的 &lt;code&gt;disqus?&lt;/code&gt; 设置为 &lt;code&gt;true&lt;/code&gt; 和指定 &lt;code&gt;disqus-shortname&lt;/code&gt; 的值。&lt;/p&gt;&lt;h2&gt;&lt;a name=&quot;文章存档&quot;&gt;&lt;/a&gt;文章存档&lt;/h2&gt;&lt;p&gt;Cryogen 会自动生成和更新你的文章存档页面，如果你想更改这个页面的样式，你可以编辑 &lt;code&gt;templates/themes/{theme}/html/archives.html&lt;/code&gt; 文件。&lt;/p&gt;
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Wed, 12 Mar 2014 00:00:00 +0800
+</pubDate>
+</item>
 <item>
 <guid>
 http://paulyim.github.io/posts-output/2014-03-11-Cryogen文档-配置.html

@@ -5,7 +5,7 @@
 http://paulyim.github.io/404.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
 </lastmod>
 </url>
 <url>
@@ -13,7 +13,7 @@ http://paulyim.github.io/404.html
 http://paulyim.github.io/archives.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
 </lastmod>
 </url>
 <url>
@@ -21,7 +21,7 @@ http://paulyim.github.io/archives.html
 http://paulyim.github.io/index.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
 </lastmod>
 </url>
 <url>
@@ -29,7 +29,7 @@ http://paulyim.github.io/index.html
 http://paulyim.github.io/pages-output/about.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
 </lastmod>
 </url>
 <url>
@@ -37,7 +37,7 @@ http://paulyim.github.io/pages-output/about.html
 http://paulyim.github.io/posts-output/2014-03-10-Cryogen-使用clojure编写的一个静态网站生成器.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
 </lastmod>
 </url>
 <url>
@@ -45,7 +45,7 @@ http://paulyim.github.io/posts-output/2014-03-10-Cryogen-使用clojure编写的�
 http://paulyim.github.io/posts-output/2014-03-11-Cryogen文档-目录结构.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
 </lastmod>
 </url>
 <url>
@@ -53,7 +53,39 @@ http://paulyim.github.io/posts-output/2014-03-11-Cryogen文档-目录结构.html
 http://paulyim.github.io/posts-output/2014-03-11-Cryogen文档-配置.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
+</lastmod>
+</url>
+<url>
+<loc>
+http://paulyim.github.io/posts-output/2014-03-12-Cryogen文档-编写文章.html
+</loc>
+<lastmod>
+2016-09-02
+</lastmod>
+</url>
+<url>
+<loc>
+http://paulyim.github.io/posts-output/2014-03-13-Cryogen文档-Markdown或者AsciDoc格式切换.html
+</loc>
+<lastmod>
+2016-09-02
+</lastmod>
+</url>
+<url>
+<loc>
+http://paulyim.github.io/posts-output/2014-03-13-Cryogen文档-创建页面.html
+</loc>
+<lastmod>
+2016-09-02
+</lastmod>
+</url>
+<url>
+<loc>
+http://paulyim.github.io/posts-output/2014-03-14-Cryogen文档-自定义你的主页.html
+</loc>
+<lastmod>
+2016-09-02
 </lastmod>
 </url>
 <url>
@@ -61,7 +93,7 @@ http://paulyim.github.io/posts-output/2014-03-11-Cryogen文档-配置.html
 http://paulyim.github.io/tags-output/cryogen.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
 </lastmod>
 </url>
 <url>
@@ -69,7 +101,7 @@ http://paulyim.github.io/tags-output/cryogen.html
 http://paulyim.github.io/tags.html
 </loc>
 <lastmod>
-2016-09-01
+2016-09-02
 </lastmod>
 </url>
 </urlset>

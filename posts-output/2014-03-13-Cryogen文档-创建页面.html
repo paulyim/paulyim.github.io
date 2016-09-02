@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8"/>
-    <title>Paul Yim Blog: 标签分类 &quot;cryogen&quot;</title>
+    <title>Paul Yim Blog: Cryogen文档-创建页面</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/paulyim/paulyim.github.io/master/img/favicon.jpg">
     <link rel="stylesheet" type="text/css"
@@ -84,41 +84,48 @@
             <div id="content">
             <div id="post">
                 
-<div id="posts-by-tag">
-    <div id="page-header">
-        <h2>标签分类 &quot;cryogen&quot;</h2>
+<div id="post">
+    <div class="post-header" style="margin-bottom: 30px; padding-bottom: 5px; border-bottom: 1px solid #d3d3d3">   
+    <h2 style="margin:0px; padding-bottom:2px">Cryogen文档-创建页面</h2>
+    <div id="post-meta">
+        <div class="date">2014-03-13</div>
+        
     </div>
-    <ul>
+</div>
+<div>
     
-        <li>
-            <a href="/posts-output/2014-03-14-Cryogen文档-自定义你的主页.html">Cryogen文档-自定义你的主页</a>
-        </li>
+    <p>创建页面基本和创建文章一样，你只需配置好相应的元数据和使用正确的 Markdown/AsciiDoc 语法。</p><h2><a name="页面文件夹"></a>页面文件夹</h2><p>和内容一样，你的页面文件要放在配置文件 <code>config.edn</code> 指定的 <code>page-root</code> 目录下，再次强调，你的文件要包含指定的元数据和使用合法的 Markdown/AsciiDoc 语法，这样编译器才能将它们转换成 HTML 页面。</p><h2><a name="创建页面"></a>创建页面</h2><p>创建一个 Markdown/AsciiDoc 文件，将它放到 <code>page-root</code> 目录下，你不需要像创建内容那样在文件名称和内容元数据标题中指定日期，但要使用英文破折号作为分隔而不要使用空格，并且文件要以 <code>.md</code> 或者 <code>.asc</code> 为扩展名，例如：</p><pre><code>about.md
+my-projects.md
+contact-me.asc
+</code></pre><h3><a name="页面内容"></a>页面内容</h3><p>以下为你的页面必须包含的元数据：</p><p><table class="table table-bordered"> <thead> <tr> <th>属性</th> <th>描述</th> </tr> </thead> <tbody> <tr> <td><code>title</code></td> <td>字符串格式的标题</td> </tr> <tr> <td><code>layout</code></td> <td>一个键值指定 HTML 生成的位置 <code>themes/{theme}/html</code>.</td> </tr> <tr> <td><code>page-index</code></td> <td>作为上篇／下篇排序的依据</td> </tr> <tr> <td><code>navbar?</code></td> <td>指定为 <code>true</code> 如果你的页面想使用 navbar（导航栏），指定为 <code>false</code> 则使用 sidebar（侧边栏）</td> </tr> </tbody> </table></p><p>示例：</p><pre><code>{:title      &quot;Check out this page!&quot;
+ :layout     :page
+ :page-index 0
+ :navbar?    false}
+</code></pre><h3><a name="页面包含图片和代码高亮"></a>页面包含图片和代码高亮</h3><p>参考 <a href='/posts-output/2014-03-12-Cryogen文档-编写文章.html'>Cryogen文档-编写文章</a></p>
+</div>
+<!-- post-footer div gets closed in home/post -->
+<div id="post-footer">
     
-        <li>
-            <a href="/posts-output/2014-03-13-Cryogen文档-创建页面.html">Cryogen文档-创建页面</a>
-        </li>
+    <div id="post-tags">
+        <b>标签分类: </b>
+        
+        <a href="/tags-output/cryogen.html">cryogen</a>
+        
+    </div>
     
-        <li>
-            <a href="/posts-output/2014-03-13-Cryogen文档-Markdown或者AsciDoc格式切换.html">Cryogen文档-Markdown或者AsciDoc格式切换</a>
-        </li>
+</div>
+    <div id="prev-next">
+        
+        <a href="/posts-output/2014-03-14-Cryogen文档-自定义你的主页.html">&laquo; Cryogen文档-自定义你的主页</a>
+        
+        
+        <a class="right" href="/posts-output/2014-03-13-Cryogen文档-Markdown或者AsciDoc格式切换.html">Cryogen文档-Markdown或者AsciDoc格式切换 &raquo;</a>
+        
+    </div>
+
     
-        <li>
-            <a href="/posts-output/2014-03-12-Cryogen文档-编写文章.html">Cryogen文档-编写文章</a>
-        </li>
-    
-        <li>
-            <a href="/posts-output/2014-03-11-Cryogen文档-配置.html">Cryogen文档-配置</a>
-        </li>
-    
-        <li>
-            <a href="/posts-output/2014-03-11-Cryogen文档-目录结构.html">Cryogen文档-目录结构</a>
-        </li>
-    
-        <li>
-            <a href="/posts-output/2014-03-10-Cryogen-使用clojure编写的一个静态网站生成器.html">Cryogen-使用Clojure编写的一个静态网站生成器</a>
-        </li>
-    
-    </ul>
+
+
 </div>
 
             </div>

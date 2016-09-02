@@ -59,11 +59,15 @@
             <h3>最近发表</h3>
             <ul id="recent">
                 
+                <li><a href="/posts-output/2014-03-14-Cryogen文档-自定义你的主页.html">Cryogen文档-自定义你的主页</a></li>
+                
+                <li><a href="/posts-output/2014-03-13-Cryogen文档-创建页面.html">Cryogen文档-创建页面</a></li>
+                
+                <li><a href="/posts-output/2014-03-13-Cryogen文档-Markdown或者AsciDoc格式切换.html">Cryogen文档-Markdown或者AsciDoc格式切换</a></li>
+                
+                <li><a href="/posts-output/2014-03-12-Cryogen文档-编写文章.html">Cryogen文档-编写文章</a></li>
+                
                 <li><a href="/posts-output/2014-03-11-Cryogen文档-配置.html">Cryogen文档-配置</a></li>
-                
-                <li><a href="/posts-output/2014-03-11-Cryogen文档-目录结构.html">Cryogen文档-目录结构</a></li>
-                
-                <li><a href="/posts-output/2014-03-10-Cryogen-使用clojure编写的一个静态网站生成器.html">Cryogen-使用Clojure编写的一个静态网站生成器</a></li>
                 
             </ul>
             
@@ -82,42 +86,15 @@
                 
 <div id="post">
     <div class="post-header" style="margin-bottom: 30px; padding-bottom: 5px; border-bottom: 1px solid #d3d3d3">   
-    <h2 style="margin:0px; padding-bottom:2px">Cryogen文档-配置</h2>
+    <h2 style="margin:0px; padding-bottom:2px">Cryogen文档-自定义你的主页</h2>
     <div id="post-meta">
-        <div class="date">2014-03-11</div>
+        <div class="date">2014-03-14</div>
         
     </div>
 </div>
 <div>
     
-    <p> Cryogen 提供了一些灵活的配置选项，配置文件在 <code>templates/config.edn</code> ，默认配置如下所示：<pre><code>{:site-title         &quot;My Awesome Blog&quot;
- :author             &quot;Bob Bobbert&quot;
- :description        &quot;This blog is awesome&quot;
- :site-url           &quot;http://blogawesome.com/&quot;
- :post-root          &quot;posts&quot;
- :page-root          &quot;pages&quot;
- :post-root-uri      &quot;posts-output&quot;
- :page-root-uri      &quot;pages-output&quot;
- :tag-root-uri       &quot;tags-output&quot;
- :author-root-uri    &quot;authors-output&quot;
- :blog-prefix        &quot;/blog&quot;
- :rss-name           &quot;feed.xml&quot;
- :rss-filters        &#91;&quot;cryogen&quot;&#93;
- :recent-posts       3
- :post-date-format   &quot;yyyy-MM-dd&quot;
- :sass-src           nil
- :sass-dest          nil
- :theme              &quot;blue&quot;
- :resources          &#91;&quot;img&quot;&#93;
- :keep-files         &#91;&quot;.git&quot;&#93;
- :disqus?            false
- :disqus-shortname   &quot;&quot;
- :ignored-files      &#91;#&quot;\.#.&#42;&quot; #&quot;.&#42;\.swp$&quot;&#93;
- :posts-per-page     5
- :blocks-per-preview 2
- :previews?          false
- :clean-urls?        true}
- </code></pre></p><h2><a name="配置选项"></a>配置选项</h2><p><table class="table table-bordered"> <thead> <tr> <th>属性</th> <th>描述</th> </tr> </thead> <tbody> <tr> <td style="width:150px"><code>site-title</code></td> <td>站点标题</td> </tr> <tr> <td><code>author</code></td> <td>站点作者</td> </tr> <tr> <td><code>description</code></td> <td>站点描述</td> </tr> <tr> <td><code>site-url</code></td> <td>站点根目录，当生成站点地图和 RSS 会被加上。</td> </tr> <tr> <td><code>post-root</code></td> <td>编译器通过它查找你的内容发布文件，必须配置。 </td> </tr> <tr> <td><code>page-root</code></td> <td>编译器通过它查找你的页面发布文件，必须配置。 </td> </tr> <tr> <td><code>post-root-uri</code></td> <td>编译后的 posts 文件放到这里，如果值为 <code>nil</code> 则被设置为 <code>post-root</code> 的值，如果值为（""）则被设置为根目录（ie. <code>resources/public/{blog-prefix}</code>）</td> </tr> <tr> <tr> <td><code>page-root-uri</code></td> <td>编译后的 pages 文件放到这里，如果值为 <code>nil</code> 则被设置为 <code>page-root</code> 的值，如果值为（""）则被设置为根目录（ie. <code>resources/public/{blog-prefix}</code>）</td></p><p></tr> <td><code>tag-root-uri</code></td> <td>tag pages 编译文件输出目录，如果不设置则会使用空字符串。</td> </tr> <tr> </tr> <td><code>author-root-uri</code></td> <td>如果你的站点有多个作者，设置这个值，编译器会为每个作者生成他所有的发表内容和页面，详细请看官方文档 <a href='/docs/writing-posts.html#multiple_authors'>这里</a>。</td> </tr> <td><code>blog-prefix</code></td> <td>追加到所有的 uri's，必须以斜杠开始。</td> </tr> <tr> <td><code>rss-name</code></td> <td>生成 rss 文件的名字, 默认为 rss.xml。</td> </tr> <tr> <td><code>rss-filters</code></td> <td>通过 tags 指定 RSS 文件内容的范围。</td> </tr> <tr> <td><code>recent-posts</code></td> <td>设置侧边栏 <code>最近发表</code> 的最多显示条数。</td> </tr> <tr> <td><code>post-date-format</code></td> <td>设置发布文件标题的日期格式，默认为 yyyy-MM-dd。</td> </tr> <tr> <td><code>sass-src</code></td> <td>这个目录用来放置 sass(scss) 文件，默认为 "css"，确保将这个目录包含到 resources 中。</td> </tr> <tr> <td><code>sass-dest</code></td> <td>这个目录用来放置 sass(scss) 的编译文件，默认为 "css"，确保将这个目录包含到 resources 中。</td> </tr> <tr> <td><code>theme</code></td> <td>这个设置用来指定 <code>themes</code> 目录下的站点主题，除了默认提供的，你可以添加自定的主题，必须设置。</td> </tr> <tr> <td><code>resources</code></td> <td>编译器复制 <code>templates</code> 的内容到 <code>public</code> 。 </td> </tr> <tr> <td><code>keep-files</code></td> <td>当擦除 <code>public</code> 文件夹时，要保留的 <code>目录/文件</code>列表, 例如. 如果你计划将<code>public</code>文件夹发布到 Github Pages 上，那么你就要保留 <code>.git</code> 文件夹。</td> </tr> <tr> <td><code>disqus?</code></td> <td>如果你想用 Disqus，设置为 <code>true</code>，不设置默认为 <code>false</code>。</td> </tr> <tr> <td><code>disqus-shortname</code></td> <td>你的 Disqus 简称。</td> </tr> <tr> <td><code>ignored-files</code></td> <td>通过正则表达式设置在编译时要忽略的文件，例如：emacs 相关文件。</td> </tr> <tr> <td><code>post-per-page</code></td> <td>如果启用了 <code>post-preview</code>（页面预览），那么在这里可以设置每个页面的预览条数。</td> </tr> <tr> <td><code>blocks-per-preview</code></td> <td>每个页面预览区块的显示条数，你也可以直接在 <code>.md</code> 或者 <code>.asc</code> 文件中通过 <code>&lt;!&ndash;more&ndash;&gt;</code> 标签设置页面预览区块。</td> </tr> <tr> <td><code>previews?</code></td> <td>设置为 <code>true</code>, 如果你想在主页只显示单条文章内容加最近发表内容列表，否则显示全部。更多讨论请看：<a href='/docs/customizing-the-index.html'>这里</a></td> </tr> <tr> <td><code>clean-urls?</code></td> <td>设置为 <code>true</code>, 会为发布的 html 添加子目录。例如：<code>prefix/root/page-name.html</code> 被替换成 <code>prefix/root/page-name/index.html</code>。访问链接也会从 <code>/page-name.html</code> 变成 <code>/page-name</code>。默认为 <code>true</code>。</td> </tr> <tr> </tr> </tbody> </table></p><p>除了以后这些配置选项之外，你也可以自己的配置选项。 例如，如果你想给你的博客文章加上副标题：</p><ol><li>添加 <code>:subtitle &quot;My subtitle&quot;</code> 到配置文件。</li><li>通过 Selmer 模板引擎 <code>{% subtitle %}</code> 注入你的内容。</li></ol>
+    <p>Cryogen 支持你的博客主页只显示单条博客的内容或者显示博客列表预览。</p><h2><a name="单条博客选项"></a>单条博客选项</h2><p>这个选项会在主页将你最后发表的一篇文章内容显示出来。</p><p>(Ex. <a href='http://yogthos.net/'>yogthos.net</a>)</p><p>这个选项不需要配置默认的 <code>config.edn</code> 文件，只需要将 <code>:previews?</code> 属性指定为 <code>false</code> 即可。</p><h2><a name="博客列表预览选项"></a>博客列表预览选项</h2><p>这个选项允许你在主页显示指定数量的文章列表，列表中的文章会显示标题、日期和文章内容的片段和一个阅读全部文章内容的链接，主页还会显示 上篇／下篇 的链接，如果有足够的数据。</p><p>如下图所示：</p><p><img src="/img/myblog-preview-ex.png" alt="预览示例" /></p><p>使用这个选项，你需要在 <code>config.edn</code> 文件中配置三个属性：</p><p><code>:posts-per-page</code> - 设置在首页显示博客列表的数目。</p><p><code>:blocks-per-preview</code> - 设置博客预览内容显示的 html 标签元素数目，例如，如果你的文章中有 <code>1</code> 个 <code>h2</code> 标签和 <code>8</code> 个 <code>p</code> 标签，然后 <code>:blocks-per-preview</code> 设置为 <code>3</code> ，那么预览内容将会显示 <code>1</code> 个 <code>h2</code> 和 <code>2</code> 个 <code>p</code> 的 html 内容。</p><p>如果你想覆盖默认的预览片段长度，你可以在 Markdown/AsciiDoc 文件中插入 <code>&lt;!&ndash;more&ndash;&gt;</code> 标记，这样 Cryogen 就知道应该从哪里折断预览内容了。</p><p><code>:previews?</code> - 设置为 <code>true</code>。</p>
 </div>
 <!-- post-footer div gets closed in home/post -->
 <div id="post-footer">
@@ -135,7 +112,7 @@
     <div id="prev-next">
         
         
-        <a class="right" href="/posts-output/2014-03-11-Cryogen文档-目录结构.html">Cryogen文档-目录结构 &raquo;</a>
+        <a class="right" href="/posts-output/2014-03-13-Cryogen文档-创建页面.html">Cryogen文档-创建页面 &raquo;</a>
         
     </div>
 </div>

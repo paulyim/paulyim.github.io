@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8"/>
-    <title>Paul Yim Blog: 标签分类 &quot;cryogen&quot;</title>
+    <title>Paul Yim Blog: Cryogen文档-自定义你的主页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/paulyim/paulyim.github.io/master/img/favicon.jpg">
     <link rel="stylesheet" type="text/css"
@@ -84,41 +84,39 @@
             <div id="content">
             <div id="post">
                 
-<div id="posts-by-tag">
-    <div id="page-header">
-        <h2>标签分类 &quot;cryogen&quot;</h2>
+<div id="post">
+    <div class="post-header" style="margin-bottom: 30px; padding-bottom: 5px; border-bottom: 1px solid #d3d3d3">   
+    <h2 style="margin:0px; padding-bottom:2px">Cryogen文档-自定义你的主页</h2>
+    <div id="post-meta">
+        <div class="date">2014-03-14</div>
+        
     </div>
-    <ul>
+</div>
+<div>
     
-        <li>
-            <a href="/posts-output/2014-03-14-Cryogen文档-自定义你的主页.html">Cryogen文档-自定义你的主页</a>
-        </li>
+    <p>Cryogen 支持你的博客主页只显示单条博客的内容或者显示博客列表预览。</p><h2><a name="单条博客选项"></a>单条博客选项</h2><p>这个选项会在主页将你最后发表的一篇文章内容显示出来。</p><p>(Ex. <a href='http://yogthos.net/'>yogthos.net</a>)</p><p>这个选项不需要配置默认的 <code>config.edn</code> 文件，只需要将 <code>:previews?</code> 属性指定为 <code>false</code> 即可。</p><h2><a name="博客列表预览选项"></a>博客列表预览选项</h2><p>这个选项允许你在主页显示指定数量的文章列表，列表中的文章会显示标题、日期和文章内容的片段和一个阅读全部文章内容的链接，主页还会显示 上篇／下篇 的链接，如果有足够的数据。</p><p>如下图所示：</p><p><img src="/img/myblog-preview-ex.png" alt="预览示例" /></p><p>使用这个选项，你需要在 <code>config.edn</code> 文件中配置三个属性：</p><p><code>:posts-per-page</code> - 设置在首页显示博客列表的数目。</p><p><code>:blocks-per-preview</code> - 设置博客预览内容显示的 html 标签元素数目，例如，如果你的文章中有 <code>1</code> 个 <code>h2</code> 标签和 <code>8</code> 个 <code>p</code> 标签，然后 <code>:blocks-per-preview</code> 设置为 <code>3</code> ，那么预览内容将会显示 <code>1</code> 个 <code>h2</code> 和 <code>2</code> 个 <code>p</code> 的 html 内容。</p><p>如果你想覆盖默认的预览片段长度，你可以在 Markdown/AsciiDoc 文件中插入 <code>&lt;!&ndash;more&ndash;&gt;</code> 标记，这样 Cryogen 就知道应该从哪里折断预览内容了。</p><p><code>:previews?</code> - 设置为 <code>true</code>。</p>
+</div>
+<!-- post-footer div gets closed in home/post -->
+<div id="post-footer">
     
-        <li>
-            <a href="/posts-output/2014-03-13-Cryogen文档-创建页面.html">Cryogen文档-创建页面</a>
-        </li>
+    <div id="post-tags">
+        <b>标签分类: </b>
+        
+        <a href="/tags-output/cryogen.html">cryogen</a>
+        
+    </div>
     
-        <li>
-            <a href="/posts-output/2014-03-13-Cryogen文档-Markdown或者AsciDoc格式切换.html">Cryogen文档-Markdown或者AsciDoc格式切换</a>
-        </li>
+</div>
+    <div id="prev-next">
+        
+        
+        <a class="right" href="/posts-output/2014-03-13-Cryogen文档-创建页面.html">Cryogen文档-创建页面 &raquo;</a>
+        
+    </div>
+
     
-        <li>
-            <a href="/posts-output/2014-03-12-Cryogen文档-编写文章.html">Cryogen文档-编写文章</a>
-        </li>
-    
-        <li>
-            <a href="/posts-output/2014-03-11-Cryogen文档-配置.html">Cryogen文档-配置</a>
-        </li>
-    
-        <li>
-            <a href="/posts-output/2014-03-11-Cryogen文档-目录结构.html">Cryogen文档-目录结构</a>
-        </li>
-    
-        <li>
-            <a href="/posts-output/2014-03-10-Cryogen-使用clojure编写的一个静态网站生成器.html">Cryogen-使用Clojure编写的一个静态网站生成器</a>
-        </li>
-    
-    </ul>
+
+
 </div>
 
             </div>
